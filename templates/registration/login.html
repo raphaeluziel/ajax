@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+  Login
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <h2>Log in</h2>
+
+  {% if form.errors %}
+    <p>Your username and password didn't match. Please try again.</p>
+  {% endif %}
+
+  {% if next %}
+    {% if user.is_authenticated %}
+      <p>Your account doesn't have access to this page. To proceed, please login with an account that has access.</p>
+    {% else %}
+      <p>Please login to see this page.</p>
+    {% endif %}
+  {% endif %}
+
+  <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+
+    {{ form|crispy }}
+    <br>
+
+    <input type="submit" value="login" class="btn btn-info"/>
+    <input type="hidden" name="next" value="{{ next }}" />
+  </form>
+
+  <br>
+  <p>Don't have an account?  <a href="{% url 'signup' %}">Signup</a></p>
+</div>
+
+
+{% endblock content %}

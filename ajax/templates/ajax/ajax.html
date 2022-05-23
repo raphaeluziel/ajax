@@ -1,0 +1,57 @@
+{% extends 'ajax/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{% static 'ajax/css/ajax.css' %}">
+{% endblock styles %}
+
+{% block content %}
+
+  <h1>ajax</h1>
+
+  {% if user.is_authenticated %}
+    <div style="text-align: right;"><a href="{% url 'logout' %}">Logout</a></div>
+  {% endif %}
+  <br>
+
+  <p>Welcome to ajax, {{ user.first_name }}.  To begin, select a category.</p>
+
+  <p>Score: <strong>{{ player.score }}</strong></p>
+
+  <form action="#" method="post">
+    {% csrf_token %}
+
+    <select class="form-select" name="category_pk" id="category">
+      <option selected disabled>Category</option>
+      {% for category in categories %}
+        <option value="{{ category.pk }}">{{ category }}</option>
+      {% endfor %}
+    </select>
+
+    <br>
+
+    <select class="form-select" name="question_pk" id="question">
+      <option selected disabled>Question</option>
+    </select>
+
+    <br>
+
+    <select class="form-select" name="answer_pk" id="answer">
+      <option selected disabled>Answer</option>
+    </select>
+
+    <br>
+    <input type="hidden" name="player_pk" value="{{ user.pk }}">
+    <input disabled class="btn btn-primary" type="submit" value="Submit" id="submit">
+  </form>
+
+  <input type="hidden" id="questions_answered_pk"
+         value="{% for question_answered in player.questions_answered.all %}{{ question_answered.pk }}{% if not forloop.last %},{% endif %}{% endfor %}">
+
+
+{% endblock content %}
+
+{% block javascript %}
+  <script src="{% static 'ajax/js/ajax.js' %}"></script>
+{% endblock javascript %}

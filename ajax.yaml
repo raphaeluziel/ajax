@@ -1,0 +1,123 @@
+---
+
+Countries:
+  What country has the largest area?:
+    answers:
+      - China
+      - India
+      - United States
+      - Russia:
+    value: 100
+  What country is the most populous?:
+    answers:
+      - China:
+      - India
+      - United States
+      - Russia
+    value: 200
+  Which country has the greatest consumption of energy?:
+    answers:
+      - India
+      - Russia
+      - United States
+      - China:
+    value: 300
+  Which country is the least dependant on fossil fuels:
+    answers:
+      - Iceland:
+      - Tajikistan
+      - Sweden
+      - France
+    value: 400
+
+Animals:
+  Which land animal is the fastest?:
+    answers:
+      - Bear
+      - Alligator
+      - Cheeta:
+      - Dog
+    value: 100
+  Which is the largest land animal?:
+    answers:
+      - Giraffe
+      - Rhinoceros
+      - Bison
+      - Elephant:
+    value: 200
+  Which is the smallest mammal?:
+    answers:
+      - American shrew mole
+      - Pygmy possum:
+      - Etruscan shrew
+      - Human
+    value: 300
+  Which of these animals can survive the longest without food?:
+    answers:
+      - Scorpion
+      - Humpback whale
+      - Crocodile:
+      - Emperor penguin
+    value: 400
+
+History:
+  What was the name of the research ship Charles Darwin traveled with?:
+    answers:
+      - The Beagle:
+      - The Nina
+      - The Darwin
+      - The Researcher
+    value: 100
+  In which year was John F. Kennedy assassinated?:
+    answers:
+      - 1961
+      - 1962
+      - 1963:
+      - 1964
+    value: 200
+  Greenland was a colony of which country until 1981?:
+    answers:
+      - Denmark:
+      - United States
+      - Russia
+      - Norway
+    value: 300
+  Which famous battle took place on Sunday, June 18th, 1815?:
+    answers:
+      - The Battle of Gettysburg
+      - The Battle of Marathon
+      - The Battle of the Alamo
+      - The Battle of Waterloo:
+    value: 400
+
+Astronomy:
+  Which planet is nearest to the Sun?:
+    answers:
+      - Mercury:
+      - Venus
+      - Earth
+      - Saturn
+    value: 100
+  Which is the largest planet in the solar system?:
+    answers:
+      - Earth
+      - Saturn
+      - Venus
+      - Jupiter:
+    value: 200
+  Which planet of our solar system has the hottest surface temperatures?:
+    answers:
+      - Earth
+      - Mercury
+      - Venus:
+      - Jupiter
+    value: 300
+  The planets make up what percentage of the mass in our solar system?:
+    answers:
+      - 0.0135%
+      - 0.135%:
+      - 1.35%
+      - 13.5%
+    value: 400
+
+...
